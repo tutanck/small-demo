@@ -12,7 +12,8 @@
   "author": "tutanck",
   "license": "ISC",
   "dependencies": {
-    "smallapi-js": "0.0.2"
+    "smallapi-js": "0.0.7",
+    "unique-names-generator": "^4.7.1"
   },
   "devDependencies": {
     "@babel/core": "7.19.3",
