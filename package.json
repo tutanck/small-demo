@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "src",
+  "main": "src/index.js",
   "scripts": {
     "run": "node src",
     "lint": "eslint .",
@@ -12,7 +12,7 @@
   "author": "tutanck",
   "license": "ISC",
   "dependencies": {
-    "smallapi-js": "^0.0.1"
+    "smallapi-js": "0.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.19.3",
