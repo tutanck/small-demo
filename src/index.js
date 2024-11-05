@@ -1,4 +1,4 @@
-import smallapi from 'smallapi-js';
+import { smallapi } from 'smallapi-js';
 import {
   uniqueNamesGenerator,
   /* Config, */ names,
