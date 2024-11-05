@@ -12,7 +12,7 @@
   "author": "tutanck",
   "license": "ISC",
   "dependencies": {
-    "smallapi-js": "0.0.7",
+    "smallapi-js": "0.0.9",
     "unique-names-generator": "^4.7.1"
   },
   "devDependencies": {
