@@ -33,11 +33,11 @@ To make sure you have them available on your machine,
 try running the following command.
 
 ```sh
-$ node --version
-v21.5.0
+node --version
+# v21.5.0
 
-$ npm --version
-10.2.4
+npm --version
+# 10.2.4
 ```
 
 ## Installation
@@ -47,28 +47,14 @@ $ npm --version
 Install the package using npm.
 
 ```sh
-$ npm i 
+npm i
 ```
 
 ## Usage
 
-```js
-import { smallapi } from 'smallapi-js';
-
-const api = await smallapi('https://my-api-url.com/', {
-  apiKey: 'my-secret-key',
-});
-
-const createdUser = await api.createUser({
-  firstName: 'John',
-  lastName: 'Doe',
-  email: `john.doe@email.com`,
-  age: 32,
-});
+```sh
+npm start
 ```
-
-
-
 
 ## Contributing
 
