@@ -10,9 +10,16 @@ Smallapi is a code plateform that helps developers craft, build and deploy APIs 
 
 Try _[Smallapi](https://smallapi.io/)_ for free.
 
-## Usecase : Growing users
+## Usecase : Basic
 
+// Growing users
 TODO
+
+## Usecase : Populate
+
+// Populate authors
+TODO
+
 
 Try it yourself. _[Get started](https://develop.smallapi.io/docs/page/quick-start)!_
 
