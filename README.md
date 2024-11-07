@@ -1,26 +1,26 @@
 # Smallapi-js
 
-[![](https://img.shields.io/npm/v/smallapi-js.svg)](https://npmjs.org/package/smallapi-js)
 [![](https://img.shields.io/npm/l/smallapi-js.svg)](https://github.com/tutanck/smallapi-js/blob/main/LICENSE)
-[![Known Vulnerabilities](https://snyk.io/test/github/tutanck/smallapi-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/tutanck/smallapi-js?targetFile=package.json)
-[![](https://img.shields.io/npm/dt/smallapi-js.svg)](https://npmjs.org/package/smallapi-js)
 
-[![NPM](https://nodei.co/npm/smallapi-js.png)](https://npmjs.org/package/smallapi-js)
+> Smallapi usage example
 
-> Smallapi client wrapper
+## What is Smallapi?
 
-## What is Smallapi-js?
+Smallapi is a code plateform that helps developers craft, build and deploy APIs to the cloud in no time. Built on top of Javascript and MongoDB, Smallapi significantly reduces the amount of code you need to write and therefore increases code quality and time to market.
 
-Smallapi-js is a small wrapper wrote in javascript that allows [smallapi](https://smallapi.io/) users to uses their APIs cloud functions from the client side.
+Try _[Smallapi](https://smallapi.io/)_ for free.
+
+## Usecase : Growing users
+
+TODO
+
+Try it yourself. _[Get started](https://develop.smallapi.io/docs/page/quick-start)!_
 
 ## Table of contents
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Example](#example)
-- [Typescript support](#typescript-support)
-- [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contributors ✨](#contributors-)
