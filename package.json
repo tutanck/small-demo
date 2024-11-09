@@ -5,8 +5,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src",
-    "start:basic": "node src/basic.js",
+    "start": "env-cmd node src",
+    "start:basic": "env-cmd node src/basic.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +19,6 @@
   "devDependencies": {
     "@babel/core": "7.19.3",
     "@babel/eslint-parser": "7.19.1",
-    "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "eslint": "8.25.0",
     "eslint-config-prettier": "8.5.0",
@@ -28,6 +27,7 @@
   },
   "keywords": [
     "smallapi",
+    "javascript",
     "client",
     "api",
     "fetch",
