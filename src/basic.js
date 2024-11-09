@@ -7,7 +7,6 @@ const config = {
 
 const api = await smallapi(process.env.API_URL, {
   apiKey: process.env.API_KEY,
-  debug: !true,
 });
 
 console.log({ api });
