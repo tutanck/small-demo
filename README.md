@@ -46,6 +46,7 @@ npm --version
 API_URL='my-api-url'
 API_KEY='my-secret-key'
 ```
+You can create the `.env` file using the `env.example` file as a template.
 
 3. Replace the values ​​'my-api-url' and 'my-secret-key' with the corresponding values ​​from a space you will have created on smallapi.
 
