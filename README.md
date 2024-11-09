@@ -74,7 +74,7 @@ To run aspecific usecase use `npm start:usecase`:
 
 ```sh
 # run the basic usecase
-npm start:basic
+npm run basic
 ```
 
 ### basic: Growing users

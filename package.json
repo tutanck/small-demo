@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "env-cmd node src",
-    "start:basic": "env-cmd node src/basic.js",
+    "basic": "env-cmd node src/basic.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
