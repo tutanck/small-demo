@@ -1,43 +1,36 @@
-# Smallapi-js
+# Smallapi-js demo
 
 [![](https://img.shields.io/npm/l/smallapi-js.svg)](https://github.com/tutanck/smallapi-js/blob/main/LICENSE)
 
-> Smallapi usage example
+> Smallapi-js usage examples
 
 ## What is Smallapi?
 
-Smallapi is a code plateform that helps developers craft, build and deploy APIs to the cloud in no time. Built on top of Javascript and MongoDB, Smallapi significantly reduces the amount of code you need to write and therefore increases code quality and time to market.
+_[Smallapi](https://smallapi.io/)_ is a code plateform that helps developers craft, build and deploy APIs to the cloud in no time. Built on top of Javascript and MongoDB, Smallapi significantly reduces the amount of code you need to write and therefore increases code quality and time to market.
 
-Try _[Smallapi](https://smallapi.io/)_ for free.
+Try _[Smallapi](https://smallapi.io/)_ for free. You can _[Get started here](https://develop.smallapi.io/docs/page/quick-start)!_
 
-## Usecase : Basic
+## What is Smallapi-js?
 
-// Growing users
-TODO
-
-## Usecase : Populate
-
-// Populate authors
-TODO
-
-
-Try it yourself. _[Get started](https://develop.smallapi.io/docs/page/quick-start)!_
+[Smallapi-js](https://github.com/tutanck/smallapi-js) is a small wrapper wrote in javascript that allows [smallapi](https://smallapi.io/) users to uses their APIs cloud functions from the client side.
 
 ## Table of contents
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Usecases](#usecases)
 - [Contributing](#contributing)
+- [Learn more](#Learn-more)
 - [License](#license)
 - [Contributors ✨](#contributors-)
 
 ## Prerequisites
 
-This project requires NodeJS (at least version 6) and NPM.
-[Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
-To make sure you have them available on your machine,
-try running the following command.
+1. This project requires NodeJS (at least version 6) and NPM.
+   [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
+   To make sure you have them available on your machine,
+   try running the following command.
 
 ```sh
 node --version
@@ -47,11 +40,20 @@ npm --version
 # 10.2.4
 ```
 
+2. Create a `.env` file at the root of the project with the keys `API_URL` and `API_KEY` like the following:
+
+```sh
+API_URL='my-api-url'
+API_KEY='my-secret-key'
+```
+
+3. Replace the values ​​'my-api-url' and 'my-secret-key' with the corresponding values ​​from a space you will have created on smallapi.
+
 ## Installation
 
 **BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
 
-Install the package using npm.
+Install the project packages using `npm install`:
 
 ```sh
 npm i
@@ -59,9 +61,34 @@ npm i
 
 ## Usage
 
+Run the project using `npm start`:
+
 ```sh
+# this will run the basic usecase by default
 npm start
 ```
+
+## Usecases
+
+To run aspecific usecase use `npm start:usecase`:
+
+```sh
+# run the basic usecase
+npm start:basic
+```
+
+### basic: Growing users
+
+In this use case we create users aged 0, then grow them to age 6 before removing them from the user database.
+
+## Learn more
+
+Learn more about the generated API [here](https://github.com/tutanck/smallapi-js#api).
+
+<!-- ##  : Populate
+
+// Populate authors
+TODO -->
 
 ## Contributing
 
@@ -76,7 +103,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## License
 
-[MIT License](https://tutanck.mit-license.org/2018) © Anagbla Joan
+[MIT License](https://tutanck.mit-license.org/2018) © Anagbla Joan (tutanck)
 
 ## Contributors ✨
 
