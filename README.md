@@ -50,6 +50,11 @@ API_KEY='my-secret-key'
 You can create the `.env` file using the `env.example` file as a template.
 
 3. Replace the values ​​'my-api-url' and 'my-secret-key' with the corresponding values ​​from a space you will have created on smallapi.
+   You can find the API_URL value the `deployment` tab of your space:
+![image](https://github.com/user-attachments/assets/1f1c9dac-d3ae-4909-8155-400a00c07465)
+and the API_URL value at the `environment` tab of your space: 
+![image](https://github.com/user-attachments/assets/2e4beb68-528f-4a81-86d5-7b944f4051c1)
+
 
 ## Installation
 
