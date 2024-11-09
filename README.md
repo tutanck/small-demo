@@ -85,7 +85,7 @@ In this use case we create users aged 0, then grow them to age 6 before removing
 
 ## Learn more
 
-Learn more about the generated API [here](https://github.com/tutanck/smallapi-js#api).
+Learn more about the generated API [here](https://github.com/tutanck/smallapi-js?tab=readme-ov-file#api).
 
 <!-- ##  : Populate
 
