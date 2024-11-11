@@ -54,7 +54,7 @@ You can create the `.env` file using the `env.example` file as a template.
 ![image](https://github.com/user-attachments/assets/1f1c9dac-d3ae-4909-8155-400a00c07465)
 The API_URL value corresponds to the url generated in the `Deploy link` section of your cloud space.
 
-Regarding the API_KEY, you can find its value in the `environment` tab of your spac, in the section `API Key Authorization`: 
+Regarding the API_KEY, you can find its value in the `environment` tab of your space, in the section `API Key Authorization`: 
 ![image](https://github.com/user-attachments/assets/2e4beb68-528f-4a81-86d5-7b944f4051c1)
 
 
