@@ -86,9 +86,9 @@ To run aspecific usecase use `npm run usecase`:
 npm run basic
 ```
 
-### basic: Growing users
+### 1. basic: Growing users
 
-In this use case we create users aged 0, then grow them to age 6 before removing them from the user database.
+In this use case we create some users aged 0, then grow them to age 6 before removing them from the users database.
 
 ## Learn more
 
