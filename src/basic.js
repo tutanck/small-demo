@@ -11,7 +11,7 @@ const api = await smallapi(process.env.API_URL, {
 
 console.log({ api });
 
-const usersCount = await api.countUser();
+const usersCount = await api.countUserDocuments();
 
 console.log({ usersCount });
 
@@ -40,7 +40,7 @@ if (usersCount < 3) {
 
   console.log({ users });
 
-  const usersCount = await api.countUser();
+  const usersCount = await api.countUserDocuments();
 
   console.log({ usersCount });
 }
@@ -59,6 +59,6 @@ const remainingUsers = await api.findUserByQuery();
 
 console.log({ remainingUsers });
 
-const remainingUsersCount = await api.countUser();
+const remainingUsersCount = await api.countUserDocuments();
 
 console.log({ remainingUsersCount });
