@@ -5,6 +5,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "lint": "eslint .",
     "start": "env-cmd node src",
     "basic": "env-cmd node src/usecases/basic.js",
     "create-random-users": "env-cmd node src/usecases/create-random-users.js",
@@ -13,9 +14,7 @@
     "remove-user-by-id": "env-cmd node src/usecases/remove-user-by-id.js",
     "remove-users-by-query": "env-cmd node src/usecases/remove-users-by-query.js",
     "update-user-by-id": "env-cmd node src/usecases/update-user-by-id.js",
-    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js",
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js"
   },
   "author": "tutanck",
   "license": "ISC",
