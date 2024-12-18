@@ -15,7 +15,7 @@ console.log('All existing users got removed from the collection...\n');
 const createdUser = await api.createUser({
   firstName: 'John',
   lastName: 'Doe',
-  email: 'John.Doe@email.com',
+  email: 'john.doe@email.com',
   age: 33,
 });
 
