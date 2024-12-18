@@ -1,64 +1,58 @@
 import { smallapi } from 'smallapi-js';
 import { uniqueNamesGenerator, names } from 'unique-names-generator';
+import { getRandomInt } from '../utils/util.js';
+
+// Connect to api using url and api key
+const api = await smallapi(process.env.API_URL, {
+  apiKey: process.env.API_KEY,
+  debug: true,
+});
+
+console.log('api:', api, '\n');
+
+// Empty the users collection
+await api.removeUserByQuery();
+console.log('All existing users got removed from the collection...\n');
+
+const nbUsersToCreate = 4;
+
+console.log('nbUsersToCreate:', nbUsersToCreate, '\n');
 
 const config = {
   dictionaries: [names],
 };
 
-const api = await smallapi(process.env.API_URL, {
-  apiKey: process.env.API_KEY,
-});
+let firstCreatedUserId;
 
-console.log('api:', api, '\n');
-
-const usersCount = await api.countUserDocuments();
-
-console.log('usersCount:', usersCount, '\n');
-
-if (usersCount > 0) {
-  const users = await api.findUserByQuery();
-
-  console.log('users:', users, '\n');
-}
-
-if (usersCount < 3) {
+for (let step = 0; step < nbUsersToCreate; step++) {
   const firstName = uniqueNamesGenerator(config);
   const lastName = uniqueNamesGenerator(config);
+  const age = getRandomInt(0, 99); // random age between 0 and 99
 
-  console.log('firstName:', firstName, lastName, '\n');
+  console.log('User to create:', { firstName, lastName, age });
 
   const createdUser = await api.createUser({
     firstName,
     lastName,
     email: `${firstName}.${lastName}@email.com`,
-    age: 0,
+    age,
   });
 
   console.log('createdUser:', createdUser, '\n');
 
-  const users = await api.findUserByQuery();
-
-  console.log('users:', users, '\n');
-
-  const usersCount = await api.countUserDocuments();
-
-  console.log('usersCount:', usersCount, '\n');
+  if (step === 0) {
+    firstCreatedUserId = createdUser._id;
+  }
 }
 
-await api.updateUserByQuery({ age: { $lt: 7 } }, { $inc: { age: 1 } });
-console.log('\nAll existing users got older with 1 year...\n');
-
+// List all users existing in the users collection
 const users = await api.findUserByQuery();
 
 console.log('users:', users, '\n');
 
-await api.removeUserByQuery({ age: { $gte: 7 } });
-console.log('\nAll users over 6 got removed...\n');
+console.log('firstCreatedUserId:', firstCreatedUserId, '\n');
 
-const remainingUsers = await api.findUserByQuery();
+// Find the first user actually created
+const firstCreatedUser = await api.findUserById(firstCreatedUserId);
 
-console.log('remainingUsers:', remainingUsers, '\n');
-
-const remainingUsersCount = await api.countUserDocuments();
-
-console.log('remainingUsersCount:', remainingUsersCount, '\n');
+console.log('firstCreatedUser:', firstCreatedUser, '\n');

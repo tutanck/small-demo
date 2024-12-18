@@ -19,7 +19,7 @@
   "author": "tutanck",
   "license": "ISC",
   "dependencies": {
-    "smallapi-js": "1.0.0",
+    "smallapi-js": "1.0.1",
     "unique-names-generator": "4.7.1"
   },
   "devDependencies": {
