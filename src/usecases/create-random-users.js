@@ -24,7 +24,7 @@ const config = {
 for (let step = 0; step < nbUsersToCreate; step++) {
   const firstName = uniqueNamesGenerator(config);
   const lastName = uniqueNamesGenerator(config);
-  const age = getRandomInt(0, 99); // // random age between 0 and 99
+  const age = getRandomInt(0, 99); // random age between 0 and 99
 
   console.log('User to crate:', { firstName, lastName, age });
 
