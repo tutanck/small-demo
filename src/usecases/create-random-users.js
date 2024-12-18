@@ -11,7 +11,7 @@ console.log('api:', api, '\n');
 
 // Empty the users collection
 await api.removeUserByQuery();
-console.log('\nAll existing users got removed from the collection...\n');
+console.log('All existing users got removed from the collection...\n');
 
 const nbUsersToCreate = getRandomInt(1, 9); // random number of users between 1 and 9
 

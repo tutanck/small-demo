@@ -9,7 +9,7 @@ console.log('api:', api, '\n');
 
 // Empty the users collection
 await api.removeUserByQuery();
-console.log('\nAll existing users got removed from the collection...\n');
+console.log('All existing users got removed from the collection...\n');
 
 // Create user John Doe aged 33
 const createdUser = await api.createUser({
