@@ -26,7 +26,7 @@ for (let step = 0; step < nbUsersToCreate; step++) {
   const lastName = uniqueNamesGenerator(config);
   const age = getRandomInt(0, 99); // random age between 0 and 99
 
-  console.log('User to crate:', { firstName, lastName, age });
+  console.log('User to create:', { firstName, lastName, age });
 
   const createdUser = await api.createUser({
     firstName,
