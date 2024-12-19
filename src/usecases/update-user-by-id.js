@@ -14,7 +14,7 @@ console.log('api:', api, '\n');
 await api.removeUserByQuery();
 console.log('All existing users got removed from the collection...\n');
 
-const nbUsersToCreate = 4;
+const nbUsersToCreate = 3;
 
 console.log('nbUsersToCreate:', nbUsersToCreate, '\n');
 
