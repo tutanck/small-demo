@@ -5,7 +5,6 @@ import { getRandomInt } from '../utils/util.js';
 // Connect to api using url and api key
 const api = await smallapi(process.env.API_URL, {
   apiKey: process.env.API_KEY,
-  debug: true,
 });
 
 console.log('api:', api, '\n');
