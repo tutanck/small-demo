@@ -14,7 +14,8 @@
     "remove-user-by-id": "env-cmd node src/usecases/remove-user-by-id.js",
     "remove-users-by-query": "env-cmd node src/usecases/remove-users-by-query.js",
     "update-user-by-id": "env-cmd node src/usecases/update-user-by-id.js",
-    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js"
+    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js",
+    "complex": "env-cmd node src/usecases/complex.js"
   },
   "author": "tutanck",
   "license": "ISC",
