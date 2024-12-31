@@ -27,9 +27,7 @@ Try _[Smallapi](https://smallapi.io/)_ for free. You can _[Get started here](htt
 
 ## Prerequisites
 
-0. This project is a demo project for <a href="https://smallapi.io/" target="_blank">the smallapi platform</a>. It works by querying an api deployed from smallapi. Start by creating and deploying an api on smallpi by following the following <a href="https://smallapi.io/docs/page/quick-start" target="_blank">tutorial</a>.
-
-1. This project requires NodeJS (at least version 6) and NPM.
+0. This project requires NodeJS (at least version 6) and NPM.
    [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
    To make sure you have them available on your machine,
    try running the following command.
@@ -42,7 +40,9 @@ npm --version
 # 10.2.4
 ```
 
-2. Create a `.env` file at the root of the project with the keys `API_URL` and `API_KEY` like the following:
+1. This project is a demo project for <a href="https://smallapi.io/" target="_blank">the smallapi platform</a>. It works by querying an api deployed from smallapi. Start by creating and deploying an api on smallpi by following the following <a href="https://smallapi.io/docs/page/quick-start" target="_blank">tutorial</a>.
+
+1. Create a `.env` file at the root of the project with the keys `API_URL` and `API_KEY` like the following:
 
 ```sh
 API_URL='my-api-url'
