@@ -8,7 +8,7 @@ const api = await smallapi(process.env.API_URL, {
 
 console.log('api:', api, '\n');
 
-// Preliminaries: Empty the users collection
+// Preliminary: Empty the users collection
 await api.removeUserByQuery();
 console.log('All existing users got removed from the collection...\n');
 
