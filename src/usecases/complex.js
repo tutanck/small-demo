@@ -1,5 +1,6 @@
 import { smallapi } from 'smallapi-js';
 import { uniqueNamesGenerator, names } from 'unique-names-generator';
+import { getRandomInt } from '../utils/util.js';
 
 // Connect to api using url and api key
 const api = await smallapi(process.env.API_URL, {
@@ -12,58 +13,62 @@ console.log('api:', api, '\n');
 await api.removeUserByQuery();
 console.log('All existing users got removed from the collection...\n');
 
-const usersCount = await api.countUserDocuments();
+// Count the initial number of users in the database
+let usersCount = await api.countUserDocuments();
 
 console.log('usersCount:', usersCount, '\n');
 
-if (usersCount > 0) {
-  const users = await api.findUserByQuery();
+// Display the initial state of the users collection
+const initialUsers = await api.findUserByQuery();
 
-  console.log('users:', users, '\n');
-}
+console.log('initialUsers:', initialUsers, '\n');
 
 const config = {
   dictionaries: [names],
 };
 
-if (usersCount < 3) {
+while (usersCount < 7) {
+  await api.updateUserByQuery({ age: { $lte: 0 } }, { $inc: { age: 1 } });
+
+  console.log('\nAll existing users grew by one year.\n');
+
   const firstName = uniqueNamesGenerator(config);
   const lastName = uniqueNamesGenerator(config);
+  const age = getRandomInt(0, 99); // random age between 0 and 99
 
-  console.log('firstName:', firstName, lastName, '\n');
+  console.log('User to create:', { firstName, lastName, age });
 
   const createdUser = await api.createUser({
     firstName,
     lastName,
-    email: `${firstName}.${lastName}@email.com`,
-    age: 0,
+    email: `${firstName.toLowerCase()}.${lastName.toLowerCase()}@email.com`,
+    age,
   });
 
   console.log('createdUser:', createdUser, '\n');
 
+  // List all users existing in the users collection
   const users = await api.findUserByQuery();
 
   console.log('users:', users, '\n');
 
-  const usersCount = await api.countUserDocuments();
+  // Count all users in the collection
+  usersCount = await api.countUserDocuments();
 
   console.log('usersCount:', usersCount, '\n');
+
+  // Delete all users whose age is greater than 99 years old
+  await api.removeUserByQuery({ age: { $gte: 99 } });
+
+  console.log('\nAll users over 99 years old have been deleted.\n');
+
+  // List all remaining users in the collection
+  const remainingUsers = await api.findUserByQuery();
+
+  console.log('remainingUsers:', remainingUsers, '\n');
+
+  // Count all remaining users in the collection
+  const remainingUsersCount = await api.countUserDocuments();
+
+  console.log('remainingUsersCount:', remainingUsersCount, '\n');
 }
-
-await api.updateUserByQuery({ age: { $lt: 7 } }, { $inc: { age: 1 } });
-console.log('\nAll existing users got older with 1 year...\n');
-
-const users = await api.findUserByQuery();
-
-console.log('users:', users, '\n');
-
-await api.removeUserByQuery({ age: { $gte: 7 } });
-console.log('\nAll users over 6 got removed...\n');
-
-const remainingUsers = await api.findUserByQuery();
-
-console.log('remainingUsers:', remainingUsers, '\n');
-
-const remainingUsersCount = await api.countUserDocuments();
-
-console.log('remainingUsersCount:', remainingUsersCount, '\n');
