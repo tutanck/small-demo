@@ -20,17 +20,19 @@ const config = {
   dictionaries: [names],
 };
 
-for (let age = 0; age < nbUsersToCreate; age++) {
+const minAge = 16;
+
+for (let count = 0; count < nbUsersToCreate; count++) {
   const firstName = uniqueNamesGenerator(config);
   const lastName = uniqueNamesGenerator(config);
 
-  console.log('User to create:', { firstName, lastName, age });
+  console.log('User to create:', { firstName, lastName, age: count });
 
   const createdUser = await api.createUser({
     firstName,
     lastName,
     email: `${firstName}.${lastName}@email.com`,
-    age,
+    age: minAge + count,
   });
 
   console.log('createdUser:', createdUser, '\n');
@@ -41,7 +43,7 @@ const users = await api.findUserByQuery();
 
 console.log('users:', users, '\n');
 
-// Find all infants (age < 2)
-const infants = await api.findUserByQuery({ age: { $lt: 2 } });
+// Find all teenagers (age < 18)
+const teenagers = await api.findUserByQuery({ age: { $lt: 18 } });
 
-console.log('infants:', infants, '\n');
+console.log('teenagers:', teenagers, '\n');
