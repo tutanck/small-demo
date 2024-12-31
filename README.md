@@ -85,18 +85,22 @@ To run a specific usecase use `npm run usecase`:
 npm run basic
 ```
 
-### 1. basic: Growing users
+### List of use cases
 
-In this use case we create some users aged 0, then grow them to age 6 before removing them from the users database.
+1. basic : Create a user then list all existing users in the users collection
+2. complex : Create some users random aged - grow them each stage while removing users over 99 years old until the collection reaches 7 users.
+3. create-random-users: Create random users - list and count all users in the colletion
+4. error-handling: Catch and handle an error raised when searching for a user that does not exist in the collection
+5. find-user-by-id: Find the first user created in the collection by their id
+6. find-users-by-query: Find all teen users (under 18 years old)
+7. remove-user-by-id: Remove the first user created in the collection by their id
+8. remove-users-by-query: Delete all users with the firstname "John"
+9. update-user-by-id: Update the age and email of the first user created in the collection by their id
+10. update-users-by-query: Update all users with the first name "John" with the first name "Joan"
 
 ## Learn more
 
 Learn more about the generated API [here](https://github.com/tutanck/smallapi-js?tab=readme-ov-file#api).
-
-<!-- ##  : Populate
-
-// Populate authors
-TODO -->
 
 ## Contributing
 
