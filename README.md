@@ -51,12 +51,11 @@ You can create the `.env` file using the `env.example` file as a template.
 
 3. Replace the values ​​'my-api-url' and 'my-secret-key' with the corresponding values ​​from a space you have created on smallapi.
    You can find the API_URL value in the `deployment` tab of your space:
-![image](https://github.com/user-attachments/assets/1f1c9dac-d3ae-4909-8155-400a00c07465)
-The API_URL value corresponds to the url generated in the `Deploy link` section of your cloud space.
+   ![image](https://github.com/user-attachments/assets/1f1c9dac-d3ae-4909-8155-400a00c07465)
+   The API_URL value corresponds to the url generated in the `Deploy link` section of your cloud space.
 
-Regarding the API_KEY, you can find its value in the `environment` tab of your space, in the section `API Key Authorization`: 
+Regarding the API_KEY, you can find its value in the `environment` tab of your space, in the section `API Key Authorization`:
 ![image](https://github.com/user-attachments/assets/2e4beb68-528f-4a81-86d5-7b944f4051c1)
-
 
 ## Installation
 
@@ -79,7 +78,7 @@ npm start
 
 ## Usecases
 
-To run aspecific usecase use `npm run usecase`:
+To run a specific usecase use `npm run usecase`:
 
 ```sh
 # run the basic usecase

@@ -1,1 +1,1 @@
-import './basic.js';
+import './usecases/basic.js';
