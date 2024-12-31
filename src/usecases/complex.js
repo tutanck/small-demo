@@ -1,15 +1,16 @@
 import { smallapi } from 'smallapi-js';
 import { uniqueNamesGenerator, names } from 'unique-names-generator';
 
-const config = {
-  dictionaries: [names],
-};
-
+// Connect to api using url and api key
 const api = await smallapi(process.env.API_URL, {
   apiKey: process.env.API_KEY,
 });
 
 console.log('api:', api, '\n');
+
+// Preliminaries: Empty the users collection
+await api.removeUserByQuery();
+console.log('All existing users got removed from the collection...\n');
 
 const usersCount = await api.countUserDocuments();
 
@@ -20,6 +21,10 @@ if (usersCount > 0) {
 
   console.log('users:', users, '\n');
 }
+
+const config = {
+  dictionaries: [names],
+};
 
 if (usersCount < 3) {
   const firstName = uniqueNamesGenerator(config);
