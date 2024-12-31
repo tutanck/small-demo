@@ -41,7 +41,7 @@ const users = await api.findUserByQuery();
 
 console.log('users:', users, '\n');
 
-// Find the first user actually created
+// Find all infants (age < 2)
 const infants = await api.findUserByQuery({ age: { $lt: 2 } });
 
 console.log('infants:', infants, '\n');
