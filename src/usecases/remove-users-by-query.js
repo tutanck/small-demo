@@ -9,7 +9,7 @@ const api = await smallapi(process.env.API_URL, {
 
 console.log('api:', api, '\n');
 
-// Empty the users collection
+// Preliminary: Empty the users collection
 await api.removeUserByQuery();
 console.log('All existing users got removed from the collection...\n');
 
@@ -44,9 +44,9 @@ const users = await api.findUserByQuery();
 console.log('users:', users, '\n');
 
 // Delete all users with the first name John
-const removedUsers = await api.removeUserByQuery({ firstName: 'John' });
+const deleteStatus = await api.removeUserByQuery({ firstName: 'John' });
 
-console.log('removedUsers:', removedUsers, '\n');
+console.log('deleteStatus:', deleteStatus, '\n');
 
 // List all remaining users in the collection
 const remainingUsers = await api.findUserByQuery();

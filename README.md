@@ -27,7 +27,7 @@ Try _[Smallapi](https://smallapi.io/)_ for free. You can _[Get started here](htt
 
 ## Prerequisites
 
-1. This project requires NodeJS (at least version 6) and NPM.
+0. This project requires NodeJS (at least version 6) and NPM.
    [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
    To make sure you have them available on your machine,
    try running the following command.
@@ -40,7 +40,9 @@ npm --version
 # 10.2.4
 ```
 
-2. Create a `.env` file at the root of the project with the keys `API_URL` and `API_KEY` like the following:
+1. This project is a demo project for <a href="https://smallapi.io/" target="_blank">the smallapi platform</a>. It works by querying an api deployed from smallapi. Start by creating and deploying an api on smallpi by following the following <a href="https://smallapi.io/docs/page/quick-start" target="_blank">tutorial</a>.
+
+1. Create a `.env` file at the root of the project with the keys `API_URL` and `API_KEY` like the following:
 
 ```sh
 API_URL='my-api-url'
@@ -85,18 +87,22 @@ To run a specific usecase use `npm run usecase`:
 npm run basic
 ```
 
-### 1. basic: Growing users
+### List of use cases
 
-In this use case we create some users aged 0, then grow them to age 6 before removing them from the users database.
+1. basic : Create a user then list all existing users in the users collection
+2. complex : Create some users random aged - grow them each stage while removing users over 99 years old until the collection reaches 7 users.
+3. create-random-users: Create random users - list and count all users in the colletion
+4. error-handling: Catch and handle an error raised when searching for a user that does not exist in the collection
+5. find-user-by-id: Find the first user created in the collection by their id
+6. find-users-by-query: Find all teen users (under 18 years old)
+7. remove-user-by-id: Remove the first user created in the collection by their id
+8. remove-users-by-query: Delete all users with the firstname "John"
+9. update-user-by-id: Update the age and email of the first user created in the collection by their id
+10. update-users-by-query: Update all users with the first name "John" with the first name "Joan"
 
 ## Learn more
 
 Learn more about the generated API [here](https://github.com/tutanck/smallapi-js?tab=readme-ov-file#api).
-
-<!-- ##  : Populate
-
-// Populate authors
-TODO -->
 
 ## Contributing
 

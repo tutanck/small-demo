@@ -11,17 +11,13 @@ console.log('api:', api, '\n');
 await api.removeUserByQuery();
 console.log('All existing users got removed from the collection...\n');
 
-// Create user John Doe aged 33
-const createdUser = await api.createUser({
-  firstName: 'John',
-  lastName: 'Doe',
-  email: 'john.doe@email.com',
-  age: 33,
-});
+try {
+  // Trigger an error when looking for a user that does not exist (no id provided)
+  const user = await api.findUserById();
 
-console.log('createdUser:', createdUser, '\n');
-
-// List all users existing in the users collection
-const users = await api.findUserByQuery();
-
-console.log('users:', users, '\n');
+  console.log('user:', user, '\n');
+} catch (error) {
+  console.log('errorMessage:', error.message);
+  console.log('errorStatus:', error.response?.status);
+  console.log('errorCause:', error.response?.data);
+}

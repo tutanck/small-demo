@@ -8,14 +8,15 @@
     "lint": "eslint .",
     "start": "env-cmd node src",
     "basic": "env-cmd node src/usecases/basic.js",
+    "complex": "env-cmd node src/usecases/complex.js",
     "create-random-users": "env-cmd node src/usecases/create-random-users.js",
+    "error-handling": "env-cmd node src/usecases/error-handling.js",
     "find-user-by-id": "env-cmd node src/usecases/find-user-by-id.js",
     "find-users-by-query": "env-cmd node src/usecases/find-users-by-query.js",
     "remove-user-by-id": "env-cmd node src/usecases/remove-user-by-id.js",
     "remove-users-by-query": "env-cmd node src/usecases/remove-users-by-query.js",
     "update-user-by-id": "env-cmd node src/usecases/update-user-by-id.js",
-    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js",
-    "complex": "env-cmd node src/usecases/complex.js"
+    "update-users-by-query": "env-cmd node src/usecases/update-users-by-query.js"
   },
   "author": "tutanck",
   "license": "ISC",
