@@ -43,7 +43,7 @@ const users = await api.findUserByQuery();
 
 console.log('users:', users, '\n');
 
-// Find all teenagers (age < 18)
+// Find all users who are teenagers (age < 18)
 const teenagers = await api.findUserByQuery({ age: { $lt: 18 } });
 
 console.log('teenagers:', teenagers, '\n');
