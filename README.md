@@ -27,6 +27,8 @@ Try _[Smallapi](https://smallapi.io/)_ for free. You can _[Get started here](htt
 
 ## Prerequisites
 
+0. This project is a demo project for [the smallapi platform](https://smallapi.io/). It works by querying an api deployed from the smallapi platform. Start by creating and deploying an api on smallpi by following the following [tutorial](https://smallapi.io/docs/page/quick-start).
+
 1. This project requires NodeJS (at least version 6) and NPM.
    [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
    To make sure you have them available on your machine,
